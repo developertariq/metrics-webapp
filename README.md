@@ -153,7 +153,13 @@ Example:
 ```sh
 npx create-react-app .
 npm install react-redux @reduxjs/toolkit
+npm install react-router-dom  
 npm i -S redux
+npm i -S prop-types  
+npm i axios 
+npm i react-test-renderer
+npm install react-bootstrap bootstrap
+npm i -S redux-thunk 
 npm i react-circular-progressbar
 
 ```
