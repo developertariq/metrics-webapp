@@ -151,6 +151,7 @@ You can deploy this project using:
 Example:
 
 ```sh
+npx create-react-app .
 npm install react-redux @reduxjs/toolkit
 npm i -S redux
 npm i react-circular-progressbar
