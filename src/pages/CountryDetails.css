@@ -1,0 +1,22 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 8px;
+  font-size: 18px;
+}
+
+.item:nth-child(even) {
+  background-color: #ce4176;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section-title img {
+  width: 45px;
+  height: 30px;
+}
