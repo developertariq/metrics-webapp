@@ -1,32 +1,61 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const CONTINENT_URL = 'https://restcountries.com/v3.1/all';
+const continentalMap = {
+  Africa: 'https://svgsilh.com/svg/28615.svg',
+  'North America': 'https://svgsilh.com/svg/307195.svg',
+  'South America': 'https://svgsilh.com/svg/311014.svg',
+  Asia: 'https://svgsilh.com/svg/151642.svg',
+  Europe: 'https://svgsilh.com/svg/151588.svg',
+  Oceania: 'https://svgsilh.com/svg/151644.svg',
+};
+
 const initialState = {
   continents: [],
   status: 'idle',
   error: null,
 };
 
-const FETCH_URL = 'https://restcountries.com/v3/all';
-
 export const getContinents = createAsyncThunk('weather/continent/FETCH_DATA', async () => {
-  const response = await axios.get(FETCH_URL);
+  const response = await axios.get(CONTINENT_URL);
   return response.data;
 });
 
-const distinctRegions = (data) => {
+const continentalInformation = (data) => {
+  const totalPopulationByContinent = {};
+  const totalAreaByContinent = {};
+  const totalCountriesByContinent = {};
+
   const distinctRegions = data.reduce((regions, country) => {
-    if (!regions.some((r) => r.text === country.continents[0])) {
+    if (!country.independent) {
+      return regions;
+    }
+    const continent = country.continents[0];
+    totalPopulationByContinent[continent] = (totalPopulationByContinent[continent] || 0)
+      + country.population;
+    totalAreaByContinent[continent] = (totalAreaByContinent[continent] || 0) + country.area;
+    totalCountriesByContinent[continent] = (totalCountriesByContinent[continent] || 0) + 1;
+
+    if (!regions.some((r) => r.name === continent && r.region === country.region)) {
       regions.push({
-        id: country.continents,
-        path: `/${country.continents[0]}`,
-        text: country.continents[0],
+        id: continent,
+        path: `/${continent}`,
+        name: continent,
         region: country.region,
       });
     }
     return regions;
   }, []);
-  return distinctRegions;
+
+  const combined = distinctRegions.map((continent) => ({
+    ...continent,
+    population: totalPopulationByContinent[continent.name],
+    area: totalAreaByContinent[continent.name],
+    noOfCountries: totalCountriesByContinent[continent.name],
+    map: continentalMap[continent.name],
+  }));
+  return combined.sort((a, b) => a.name.localeCompare(b.name));
 };
 
 const continentsSlice = createSlice({
@@ -40,7 +69,7 @@ const continentsSlice = createSlice({
       })
       .addCase(getContinents.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.continents = distinctRegions(action.payload);
+        state.continents = continentalInformation(action.payload);
       })
       .addCase(getContinents.rejected, (state, action) => {
         state.status = 'failed';

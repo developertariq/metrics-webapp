@@ -3,21 +3,23 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import { getContinents } from '../Redux/Continent/continentsSlice';
-import logo from '../images/weather-icon-png-11063.png';
+import Continent from '../components/Continent';
+import PageHeader from '../components/PageHeader';
+import world from '../images/world.svg';
 
 const Continents = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { continents, status, error } = useSelector((state) => state.continents);
+
   useEffect(() => {
     if (continents.length === 0) {
       dispatch(getContinents());
     }
   }, [continents, dispatch]);
 
-  const handleContinentClick = (region, continent) => {
-    document.write(region, continent);
-    navigate(`/countries?continent=${continent}&region=${region}`);
+  const handleContinentClick = (continent) => {
+    navigate(`/continent?continent=${JSON.stringify(continent)}`);
   };
 
   if (status === 'loading') {
@@ -32,15 +34,29 @@ const Continents = () => {
       </div>
     );
   }
+  const sum = continents.reduce((acc, obj) => acc + obj.population, 0);
+
   return (
-    <div>
-      <div>
-        <img src={logo} alt="Earth logo" className="App-logo" />
-      </div>
+    <div className="main-container">
+      <PageHeader
+        map={world}
+        name="World"
+        population={sum}
+      />
+      <div className="section-title"><h4>Continent</h4></div>
       <Navbar>
         <Nav className="navbar">
-          {continents.map((link) => (
-            <Nav.Link className="nav-item" key={link.id} to={link.path} onClick={() => handleContinentClick(`${link.region}, ${link.text}`)}>{link.text}</Nav.Link>
+          {continents.map((continent) => (
+            <Nav.Link
+              className="nav-item"
+              key={continent.id}
+              to={continent.path}
+              onClick={() => {
+                handleContinentClick(continent);
+              }}
+            >
+              <Continent continent={continent} />
+            </Nav.Link>
           ))}
         </Nav>
       </Navbar>
