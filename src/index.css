@@ -1,19 +1,15 @@
 body {
-  max-width: 576px;
+  max-width: 475px;
   margin: 0 auto;
-  background-color: aliceblue;
+  background-color: #fff;
   font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
+    'Gill Sans',
+    'Gill Sans MT',
+    Calibri,
+    'Trebuchet MS',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  overflow-x: hidden;
 }
