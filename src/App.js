@@ -6,6 +6,7 @@ import Continents from './pages/Continents';
 import store from './Redux/configureStore';
 import './App.css';
 import Countries from './pages/Countries';
+import CountryDetails from './pages/CountryDetails';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" exact element={<Continents />} />
-            <Route index path="/countries" element={<Countries />} />
+            <Route index path="/continent" element={<Countries />} />
+            <Route index path="/country" element={<CountryDetails />} />
           </Routes>
         </div>
       </Router>
