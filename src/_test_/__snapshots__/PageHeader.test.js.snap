@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeader component renders correctly 1`] = `
+<div
+  className="page-header"
+>
+  <img
+    alt=""
+    className="page-image"
+    src=""
+  />
+  <div
+    className="page-title"
+  >
+    <h2
+      style={
+        Object {
+          "marginBottom": "0",
+        }
+      }
+    />
+    0
+  </div>
+</div>
+`;

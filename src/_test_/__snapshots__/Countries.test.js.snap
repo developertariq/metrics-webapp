@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Countries page renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <div
+    className="page-header"
+  >
+    <img
+      alt=""
+      className="page-image"
+      src=""
+    />
+    <div
+      className="page-title"
+    >
+      <h2
+        style={
+          Object {
+            "marginBottom": "0",
+          }
+        }
+      />
+      0
+    </div>
+  </div>
+  <div
+    className="section-title"
+  >
+    <h4>
+       
+      Countries in
+       
+    </h4>
+  </div>
+  <nav
+    className="navbar navbar-expand navbar-light"
+  >
+    <div
+      className="navbar navbar-nav"
+      onKeyDown={[Function]}
+    />
+  </nav>
+</div>
+`;
+
+exports[`Country component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <div
+    className="page-header"
+  >
+    <img
+      alt=""
+      className="page-image"
+      src=""
+    />
+    <div
+      className="page-title"
+    >
+      <h2
+        style={
+          Object {
+            "marginBottom": "0",
+          }
+        }
+      />
+      0
+    </div>
+  </div>
+  <div
+    className="section-title"
+  >
+    <h4>
+       
+      Countries in
+       
+    </h4>
+  </div>
+  <nav
+    className="navbar navbar-expand navbar-light"
+  >
+    <div
+      className="navbar navbar-nav"
+      onKeyDown={[Function]}
+    />
+  </nav>
+</div>
+`;

@@ -70,7 +70,7 @@ You will select an API that provides numeric data about a topic that you like an
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://tariq-bookstore.onrender.com/) 
+- [Live Demo](https://tariq-metrics-webapp.onrender.com/) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,7 +165,13 @@ npm i -S uuid
 npm install react-icons
 npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
 npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-
+npm install history
+npm install --save-dev jest
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+npm install --save-dev jest @testing-library/react
+npm install --save-dev redux react-redux
+npm install --save-dev jest-environment-jsdom
+npm install --save-dev @testing-library/jest-dom
 ```
  -->
 

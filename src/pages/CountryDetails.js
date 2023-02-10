@@ -9,7 +9,7 @@ const CountryDetails = () => {
   const country = JSON.parse(searchParams.get('country') || '{}');
 
   const {
-    name, population, area, official, capital, latlng, flag,
+    name, population, area, official, capital, lat, lng, flag,
   } = country;
 
   return (
@@ -44,9 +44,9 @@ const CountryDetails = () => {
         </div>
         <div className="item">
           Latitude
-          <span>{latlng[0]}</span>
+          <span>{lat}</span>
           Longitude
-          <span>{latlng[1]}</span>
+          <span>{lng}</span>
         </div>
       </div>
     </div>

@@ -32,7 +32,8 @@ const countryInformation = (data) => {
       subregion: country.subregion,
       continent: country.continents[0],
       currencies: country.currencies,
-      latlng: country.latlng,
+      lat: country.latlng[0],
+      lng: country.latlng[1],
       languages: country.languages,
     }));
 

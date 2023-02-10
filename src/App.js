@@ -2,7 +2,6 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Continents from './pages/Continents';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import store from './Redux/configureStore';
 import './App.css';
 import Countries from './pages/Countries';

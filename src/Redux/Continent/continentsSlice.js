@@ -24,7 +24,6 @@ export const getContinents = createAsyncThunk('weather/continent/FETCH_DATA', as
 
 const continentalInformation = (data) => {
   const totalPopulationByContinent = {};
-  const totalAreaByContinent = {};
   const totalCountriesByContinent = {};
 
   const distinctRegions = data.reduce((regions, country) => {
@@ -34,7 +33,6 @@ const continentalInformation = (data) => {
     const continent = country.continents[0];
     totalPopulationByContinent[continent] = (totalPopulationByContinent[continent] || 0)
       + country.population;
-    totalAreaByContinent[continent] = (totalAreaByContinent[continent] || 0) + country.area;
     totalCountriesByContinent[continent] = (totalCountriesByContinent[continent] || 0) + 1;
 
     if (!regions.some((r) => r.name === continent && r.region === country.region)) {
@@ -51,7 +49,6 @@ const continentalInformation = (data) => {
   const combined = distinctRegions.map((continent) => ({
     ...continent,
     population: totalPopulationByContinent[continent.name],
-    area: totalAreaByContinent[continent.name],
     noOfCountries: totalCountriesByContinent[continent.name],
     map: continentalMap[continent.name],
   }));

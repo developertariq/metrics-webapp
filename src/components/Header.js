@@ -8,10 +8,10 @@ import { BsMicFill } from 'react-icons/bs';
 import { updateTitle } from '../Redux/Title/titleReducer';
 
 const Header = () => {
-  const navigate = useNavigate();
-  const title = useSelector((state) => state.title);
   const dispatch = useDispatch();
   const location = useLocation();
+  const title = useSelector((state) => state.title);
+  const navigate = useNavigate();
 
   useEffect(() => {
     let newTitle = '';
