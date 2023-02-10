@@ -186,6 +186,7 @@ npm install --save-dev jest @testing-library/react
 npm install --save-dev redux react-redux
 npm install --save-dev jest-environment-jsdom
 npm install --save-dev @testing-library/jest-dom
+npm i redux-mock-store
 ```
  -->
 
@@ -231,6 +232,7 @@ If you like this project, please star the project.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I highly appreciated [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for his excellent design. 
 I would like to thank all reviewers and testers.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
