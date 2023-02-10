@@ -19,7 +19,6 @@ exports[`PageHeader component renders correctly 1`] = `
         }
       }
     />
-    0
   </div>
 </div>
 `;

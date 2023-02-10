@@ -27,7 +27,7 @@ const Continent = (props) => {
 Continent.propTypes = {
   continent: PropTypes.shape({
     name: PropTypes.string,
-    population: PropTypes.number,
+    population: PropTypes.string,
     map: PropTypes.string,
   }),
 };
@@ -35,7 +35,7 @@ Continent.propTypes = {
 Continent.defaultProps = {
   continent: PropTypes.shape({
     name: '',
-    population: 0,
+    population: '',
     map: '',
   }),
 };

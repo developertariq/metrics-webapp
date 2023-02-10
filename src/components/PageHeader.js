@@ -18,13 +18,13 @@ const PageHeader = (props) => {
 };
 PageHeader.propTypes = {
   name: PropTypes.string,
-  population: PropTypes.number,
+  population: PropTypes.string,
   map: PropTypes.string,
 };
 
 PageHeader.defaultProps = {
   name: '',
-  population: 0,
+  population: '',
   map: '',
 };
 

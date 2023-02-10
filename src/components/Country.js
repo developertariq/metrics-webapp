@@ -34,7 +34,7 @@ const Country = (props) => {
 Country.propTypes = {
   country: PropTypes.shape({
     name: PropTypes.string,
-    population: PropTypes.number,
+    population: PropTypes.string,
     map: PropTypes.string,
   }),
 };
@@ -42,7 +42,7 @@ Country.propTypes = {
 Country.defaultProps = {
   country: PropTypes.shape({
     name: '',
-    population: 0,
+    population: '',
     map: '',
   }),
 };

@@ -13,12 +13,12 @@ const getCountries = createAsyncThunk('population/country/FETCH_DATA', async (ob
   const { region } = obj;
   const response = await fetch(`${'https://restcountries.com/v3.1/region/'}${region}`);
 
-    const data = await response.json();
-    let isAPIFetched = false;
-    if (data.length > 0) {
-      isAPIFetched = true;
-    }
-    return isAPIFetched;
+  const data = await response.json();
+  let isAPIFetched = false;
+  if (data.length > 0) {
+    isAPIFetched = true;
+  }
+  return isAPIFetched;
 });
 
 const initialState = {
@@ -32,20 +32,14 @@ const dataSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(getContinents.fulfilled, (state, action) => {
-        const updatedState = {
-          ...state,
-          countries: action.payload,
-        };
-        return updatedState;
-      })
-      .addCase(getCountries.fulfilled, (state, action) => {
-        const updatedState = {
-          ...state,
-          countries: action.payload,
-        };
-        return updatedState;
-      });
+      .addCase(getContinents.fulfilled, (state, action) => ({
+        ...state,
+        countries: action.payload,
+      }))
+      .addCase(getCountries.fulfilled, (state, action) => ({
+        ...state,
+        countries: action.payload,
+      }));
   },
 });
 
