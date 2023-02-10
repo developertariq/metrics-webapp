@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryDetails component renders correctly 1`] = `
+<div
+  className="main-container"
+>
+  <div
+    className="page-header"
+  >
+    <img
+      alt=""
+      className="page-image"
+      src=""
+    />
+    <div
+      className="page-title"
+    >
+      <h2
+        style={
+          Object {
+            "marginBottom": "0",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="section-title"
+  >
+    <h4 />
+    <img
+      alt=""
+    />
+  </div>
+  <div
+    className="main-container"
+  >
+    <div
+      className="item"
+    >
+      <span>
+        Official Name
+      </span>
+      <span />
+    </div>
+    <div
+      className="item"
+    >
+      Capital
+      <span />
+    </div>
+    <div
+      className="item"
+    >
+      Population
+      <span />
+    </div>
+    <div
+      className="item"
+    >
+      Area
+      <span />
+    </div>
+    <div
+      className="item"
+    >
+      Latitude
+      <span />
+      Longitude
+      <span />
+    </div>
+  </div>
+</div>
+`;

@@ -15,7 +15,10 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+      - [Home page](#home-page)
+    - [Details page](#details-page)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Description Video Link ](#-description-video-link-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -59,10 +62,14 @@ You will select an API that provides numeric data about a topic that you like an
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
+#### Home page
+- When the page loads, the webapp shows the list of categories that could be filtered out by some parameter, for example by the category name.
+- Along with the category name, you will display some numeric values per category that come from the API.
+- When the user clicks (or taps) on a category item, the application navigates to the details page.
 
-- **Display a list of books.**
-- **Add a book.**
-- **Remove a selected book.**
+### Details page
+- In the details page, the webapp retrieves data from the API to show detailed data in the category.
+- When the user clicks on the "Back" button (<), the user navigates to the home page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -70,7 +77,14 @@ You will select an API that provides numeric data about a topic that you like an
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://tariq-bookstore.onrender.com/) 
+- [Live Demo](https://tariq-metrics-webapp.onrender.com/) 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- DESCRIPTION VIDEO LINK -->
+## 🚀 Description Video Link <a name="live-demo"></a>
+
+- [Description Video Link](https://www.loom.com/share/a4049f6e021049139b492daae953ecbe)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,9 +175,18 @@ npm i react-test-renderer
 npm install react-bootstrap bootstrap
 npm i -S redux-thunk 
 npm i react-circular-progressbar
+npm i -S uuid
+npm install react-icons
 npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
 npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
-
+npm install history
+npm install --save-dev jest
+npm install --save-dev babel-jest @babel/core @babel/preset-env
+npm install --save-dev jest @testing-library/react
+npm install --save-dev redux react-redux
+npm install --save-dev jest-environment-jsdom
+npm install --save-dev @testing-library/jest-dom
+npm i redux-mock-store
 ```
  -->
 
@@ -184,8 +207,8 @@ npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standa
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-- **Add, edit and display category**
+- Implement some UX improvements: include transitions and/or animations, etc.
+- Implement additional pages in the website (each with a route in the SPA): about me, references, etc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -209,6 +232,7 @@ If you like this project, please star the project.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+I highly appreciated [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for his excellent design. 
 I would like to thank all reviewers and testers.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -1,0 +1,21 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  height: 180px;
+  background-color: #ec4c8a;
+  padding: 10px;
+}
+
+.page-image {
+  max-width: 50%;
+  height: 180px;
+  opacity: 0.3;
+}
+
+.page-title {
+  max-width: 50%;
+  align-items: flex-start;
+  text-align: right;
+}
