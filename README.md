@@ -15,7 +15,10 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+      - [Home page](#home-page)
+    - [Details page](#details-page)
   - [🚀 Live Demo ](#-live-demo-)
+  - [🚀 Description Video Link ](#-description-video-link-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -59,10 +62,14 @@ You will select an API that provides numeric data about a topic that you like an
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
+#### Home page
+- When the page loads, the webapp shows the list of categories that could be filtered out by some parameter, for example by the category name.
+- Along with the category name, you will display some numeric values per category that come from the API.
+- When the user clicks (or taps) on a category item, the application navigates to the details page.
 
-- **Display a list of books.**
-- **Add a book.**
-- **Remove a selected book.**
+### Details page
+- In the details page, the webapp retrieves data from the API to show detailed data in the category.
+- When the user clicks on the "Back" button (<), the user navigates to the home page.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,6 +78,13 @@ You will select an API that provides numeric data about a topic that you like an
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo](https://tariq-metrics-webapp.onrender.com/) 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- DESCRIPTION VIDEO LINK -->
+## 🚀 Description Video Link <a name="live-demo"></a>
+
+- [Description Video Link](https://www.loom.com/share/a4049f6e021049139b492daae953ecbe)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -192,8 +206,8 @@ npm install --save-dev @testing-library/jest-dom
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-- **Add, edit and display category**
+- Implement some UX improvements: include transitions and/or animations, etc.
+- Implement additional pages in the website (each with a route in the SPA): about me, references, etc.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
