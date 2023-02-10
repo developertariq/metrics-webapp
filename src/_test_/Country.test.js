@@ -29,7 +29,7 @@ describe('Country component', () => {
 
   test('renders the Country component with non-default props', () => {
     const { getByAltText, getByText } = render(
-      <Country country={{ name: 'Test Country', population: '1,000,000', map: 'test-map.png' }} />
+      <Country country={{ name: 'Test Country', population: '1,000,000', map: 'test-map.png' }} />,
     );
     const countryMap = getByAltText('Test Country');
     const countryName = getByText('Test Country');

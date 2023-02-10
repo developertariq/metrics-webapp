@@ -21,7 +21,7 @@ describe('PageHeader component', () => {
 
   test('renders the PageHeader component with non-default props', () => {
     const { getByAltText, getByText } = render(
-      <PageHeader name="Test City" population={100000} map="test-map.png" />
+      <PageHeader name="Test City" population={100000} map="test-map.png" />,
     );
     const pageImage = getByAltText('Test City');
     const pageTitle = getByText('Test City');
@@ -31,7 +31,7 @@ describe('PageHeader component', () => {
 
   test('renders the correct population in the PageHeader component', () => {
     const { getByText } = render(
-      <PageHeader name="Test City" population={100000} map="test-map.png" />
+      <PageHeader name="Test City" population={100000} map="test-map.png" />,
     );
     const population = getByText('100000');
     expect(population).toBeInTheDocument();
