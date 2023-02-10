@@ -8,10 +8,11 @@
   padding: 10px;
 }
 
-.page-image{
+.page-image {
   max-width: 50%;
   height: 180px;
   opacity: 0.3;
+
   /* object-fit: cover; */
 }
 

@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const COUNTRY_URL = 'https://restcountries.com/v3.1/region/';
-// const MAP_URL = 'https://raw.githubusercontent.com/djaiss/mapsicon/33ba28808f8d32b5bae0ffada9cadd07073852e1/all/';
 const COUNTRY_MAP_URL = 'https://raw.githubusercontent.com/djaiss/mapsicon/master/all/';
 const initialState = {
   countries: [],

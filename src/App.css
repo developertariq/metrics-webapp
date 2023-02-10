@@ -42,7 +42,7 @@
 
 .nav-link {
   text-decoration: none;
-} 
+}
 
 .right-arrow {
   width: 100%;
@@ -82,9 +82,6 @@
   display: flex;
   flex-direction: column;
   justify-content: right;
-  align-items: right;
   text-align: right;
   margin: 0;
-  position: 'absolute';
 }
-
