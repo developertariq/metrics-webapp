@@ -36,11 +36,17 @@ const CountryDetails = () => {
         </div>
         <div className="item">
           Population
-          <span>{population}</span>
+          <span>
+            {population}
+          </span>
         </div>
         <div className="item">
           Area
-          <span>{area}</span>
+          <span>
+            {area}
+            {' '}
+            sq. km
+          </span>
         </div>
         <div className="item">
           Latitude

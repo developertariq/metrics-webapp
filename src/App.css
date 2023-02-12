@@ -1,6 +1,6 @@
 .main-container {
   max-width: 100%;
-  background-color: #ec4c8a;
+  background-color: #ce4176;
   padding: 0;
   color: #fff;
 }
@@ -34,10 +34,10 @@
   color: #fff;
 }
 
-.navbar .nav-item:nth-child(2),
-.navbar .nav-item:nth-child(4n-2),
-.navbar .nav-item:nth-child(4n-1) {
-  background-color: #ce4176;
+.navbar .nav-item:nth-child(1),
+.navbar .nav-item:nth-child(4n),
+.navbar .nav-item:nth-child(4n+1) {
+  background-color: #d8487f;
 }
 
 .nav-link {
