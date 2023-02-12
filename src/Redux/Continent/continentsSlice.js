@@ -35,7 +35,7 @@ const continentalInformation = (data) => {
       + country.population;
     totalCountriesByContinent[continent] = (totalCountriesByContinent[continent] || 0) + 1;
 
-    if (!regions.some((r) => r.region === country.region)) {
+    if (!regions.some((r) => r.name === continent && r.region === country.region)) {
       regions.push({
         id: continent,
         path: `/${continent}`,
